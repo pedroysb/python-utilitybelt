@@ -23,7 +23,7 @@ def hex_to_int(s):
 
 def int_to_hex(i):
     try:
-        return hex(i).rstrip('L').lstrip('0x')
+        return hex(i).rstrip('L').split('0x', 1)[1]
     except:
         raise ValueError("Value must be in int format")
 
